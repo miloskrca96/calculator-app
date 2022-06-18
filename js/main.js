@@ -47,11 +47,23 @@ for(let i=0; i < buttons.length;i++) {
             action = 'calculation-done'
          
             for(let i=0; i < tokens.length; i++) {
-                if(tokens[i] >= '0' && tokens[i] <= '9'){
+                if((tokens[i] >= '0' && tokens[i] <= '9') || tokens[i] == '.'){
                     let val = 0;
-                     
-                    while(i < tokens.length && tokens[i] >= '0' && tokens[i] <= '9') {
-                        val = (val*10) + (tokens[i]-'0');
+                    var decimal = false
+                    divisor = 10
+                    while(i < tokens.length && ((tokens[i] >= '0' && tokens[i] <= '9') || tokens[i] == '.')) {
+                        if (tokens[i] == '.') {
+                            decimal = true
+                            i++;
+                        }
+
+                        if(!decimal) {
+                            val = (val*10) + (tokens[i]-'0');
+                        } else {
+                            val = val + (tokens[i]-'0') / divisor
+                            divisor *= 10
+                        }
+                        
                         i++;
                     }
                      
