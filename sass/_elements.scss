@@ -115,6 +115,15 @@
                 outline: none;
                 border: none;
                 cursor: pointer;
+
+                @media (max-width: $sm) {
+                    padding: 15px;
+                }
+            }
+
+            @media (max-width: $sm) {
+                row-gap: 10px;
+                column-gap: 10px;
             }
         }
 
@@ -138,5 +147,10 @@
                 cursor: pointer;
             }
         }
+    }
+
+    @media (max-width: $sm) {
+        padding: 0 10px;
+        width: auto;
     }
 }
