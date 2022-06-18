@@ -32,14 +32,14 @@ footer .footer {
   display: flex;
 }
 footer .footer .footer__text {
-  color: hsl(52deg, 100%, 62%);
+  color: #fff;
   font-family: "League Spartan", sans-serif;
   font-size: 18px;
   line-height: 18px;
 }
 footer .footer .footer__link {
   display: flex;
-  color: hsl(52deg, 100%, 62%);
+  color: #fff;
   font-family: "League Spartan", sans-serif;
   font-size: 18px;
   line-height: 18px;
