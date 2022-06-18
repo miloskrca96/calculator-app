@@ -1,0 +1,115 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$main-font-family : 'League Spartan', sans-serif;
+
+// Content width
+$max-width : 450px;
+
+// Breakpoints
+$xs : 320px;
+$sm : 575px;
+$md : 767px;
+$lg : 991px;
+$xl : 1024px;
+
+// Colors Theme1
+$mainbgcolor_theme1        : hsl(222, 26%, 31%);
+$calbgcolor_theme1         : hsl(224, 36%, 15%);
+$color1_theme1             : hsl(6, 63%, 50%);
+$color1_boxshadow_theme1   : 0px 3px 0px 0px hsl(6deg 70% 34%);
+$color2_theme1             : hsl(225, 21%, 49%);
+$color2_boxshadow_theme1   : 0px 3px 0px 0px hsl(224deg 28% 35%);
+$color3_theme1             : hsl(0deg 0% 94%);
+$color3_boxshadow_theme1   : 0px 3px 0px 0px hsl(28deg 16% 65%);
+$font_color_theme1         : #444b5a;
+
+
+// Colors Theme2
+$mainbgcolor_theme2        : hsl(0, 0%, 90%);
+$calbgcolor_theme2         : #d1cccc;
+$color1_theme2             : hsl(25, 98%, 40%);
+$color1_boxshadow_theme2   : 0px 3px 0px 0px hsl(25deg 99% 27%);
+$color2_theme2             : hsl(185, 42%, 37%);
+$color2_boxshadow_theme2   : 0px 3px 0px 0px hsl(35deg 11% 61%);
+$color3_theme2             : hsl(0deg 0% 94%);
+$color3_boxshadow_theme2   : 0px 3px 0px 0px hsl(35deg 11% 61%);
+$font_color_theme2         : #444b5a;
+
+// Colors Theme3
+$mainbgcolor_theme3        : hsl(268, 75%, 9%);
+$calbgcolor_theme3         : hsl(268, 71%, 12%);
+$color1_theme3             : hsl(176, 100%, 44%);
+$color1_boxshadow_theme3   : 0px 3px 0px 0px hsl(177deg 92% 70%);
+$color2_theme3             : hsl(268, 47%, 21%);
+$color2_boxshadow_theme3   : 0px 3px 0px 0px hsl(290deg 70% 36%);
+$color3_theme3             : hsl(290, 70%, 36%);
+$color3_boxshadow_theme3   : 0px 3px 0px 0px hsl(268deg 47% 21%);
+$font_color_theme3         : #444b5a;
+
+
+
+$white : #fff;
+$fontcolor_theme2 : #111;
+$fontcolor_theme3 : hsl(52, 100%, 62%);
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 18px 0;
+
+    .footer {
+        max-width: $max-width;
+        column-gap: 7px;
+        display: flex;
+
+        .footer__text {
+            color: $fontcolor_theme3;
+            font-family: $main-font-family;
+            font-size: 18px;
+            line-height: 18px;
+        }
+    
+        .footer__link {
+            display: flex;
+            color: $fontcolor_theme3;
+            font-family: $main-font-family;
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        @media (max-width: 575px) {
+            padding: 0 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .footer__text {
+                font-size: 14px;
+            }
+
+            .footer__link {
+                font-size: 14px;
+            }
+        }
+    }
+}

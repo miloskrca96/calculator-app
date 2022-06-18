@@ -1,0 +1,96 @@
+body {
+    &.theme1  {
+        background-color: $mainbgcolor_theme1;
+
+        .calculator__wrapper {
+            .calculator__first-part {
+                .calculator__first-part__name {
+                    color: $white;
+                }
+
+                .calculator__first-part__theme-option {
+                    .option__wrapper {
+                        .option {
+                            color: $white;
+                        }
+                    }
+                }
+
+                .option__functional-part {
+                    .option__functional-part-text {
+                        color: $white;
+                    }
+
+                    .selected__theme {
+                        background-color: $calbgcolor_theme1;
+                        .selected__theme-inner {
+                            background-color: $color1_theme1;
+                            height: 20px;
+                            width: 20px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+
+            .calculator__second-part { 
+                .numbers__input {
+                    background-color: $calbgcolor_theme1;
+                    color: $white;
+                }
+            }
+
+            .calculator__third-part {
+                background-color: $calbgcolor_theme1;
+
+                .buttons__wrapper-grid {
+                    .btn {
+                        color: $font_color_theme1;
+                        background-color: $color3_theme1;
+                        transition: box-shadow 200ms;
+
+                        &:hover {
+                            box-shadow: $color3_boxshadow_theme1; 
+                        }
+                      
+
+                        &.btn-color1 {
+                            color: $white;
+                            background-color: $color2_theme1;
+                            transition: box-shadow 200ms;
+
+                            &:hover {
+                                box-shadow: $color2_boxshadow_theme1;
+                            }
+                         
+                        }
+                    }
+                }
+
+                .buttons__wrapper-flex {
+                    .btn {
+                        &.btn-color1 {
+                            color: $white;
+                            background-color: $color2_theme1;
+                            transition: box-shadow 200ms;
+
+                            &:hover {
+                                box-shadow: $color2_boxshadow_theme1
+                            }
+                        }
+
+                        &.btn-color2 {
+                            color: $white;
+                            background-color: $color1_theme1;
+                            transition: box-shadow 200ms;
+
+                            &:hover {
+                                box-shadow: $color1_boxshadow_theme1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
