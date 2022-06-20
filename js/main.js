@@ -71,14 +71,10 @@ for(let i=0; i < buttons.length;i++) {
                     i--;
                 } else {
                     while(ops.length != 0 && precedence(ops[ops.length-1]) >= precedence(tokens[i])) {
-                        let val2 = values[values.length-1];
-                        values.pop();
-                        
-                        let val1 = values[values.length-1];
-                        values.pop();
-                        
-                        let op = ops[ops.length-1];
-                        ops.pop();
+                        const val2 = values.pop();
+                        const val1 =  values.pop();
+                        const op = ops.pop();
+                       
                         
                         values.push(applyOperation(val1, val2, op));
                     }
@@ -87,15 +83,10 @@ for(let i=0; i < buttons.length;i++) {
             }
 
             while(ops.length != 0){
-                let val2 = values[values.length-1];
-                values.pop();
-                            
-                let val1 = values[values.length-1];
-                values.pop();
-                            
-                let op = ops[ops.length-1];
-                ops.pop();
-                            
+                const val2 = values.pop();           
+                const val1 = values.pop();        
+                const op = ops.pop();
+                         
                 values.push(applyOperation(val1, val2, op));
             }
 
@@ -134,7 +125,6 @@ for(let i=0; i < buttons.length;i++) {
 
 
 //HELPER FUNCTIONS
-
 function precedence(op){
     if(op == '+'||op == '-')
         return 1;
@@ -143,13 +133,25 @@ function precedence(op){
     return 0;
 }
 
+function isFloat(n){
+    return Number(n) === n && n % 1 !== 0;
+}
+
 function applyOperation(a, b, op){
+    let result
+    a = (a === undefined) ? 0 : a;
+    b = (b === undefined) ? 0 : b;
+    
     switch(op){
-        case '+': return a + b;
-        case '-': return a - b;
-        case '*': return a * b;
-        case '/': return a / b;
+        case '+': { result =  a + b; break; }
+        case '-': { result = a - b; break; }
+        case '*': { result = a * b; break; }
+        case '/': { result = a / b; break; }
     }
+
+    result = isFloat(result) ? result.toFixed(2) : result;
+
+    return result
 }
 
 function notSign(elem) {
